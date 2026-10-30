@@ -1,0 +1,1327 @@
+{
+  "code": "CSE1022",
+  "name": "Introduction to Programming",
+  "source": "CSE1022.pdf",
+  "options": [
+    {
+      "faculty": "Naresh Boda",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-G13",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Prof.SENSE Dig Crs Faculty-1",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-112",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Prof.SENSE Dig Crs Faculty-1",
+      "slots": ["F2", "TF2"],
+      "venue": "AB1-416",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Vangapandu Dhanunjaya Naidu",
+      "slots": ["F2", "TF2"],
+      "venue": "AB1-406",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Mamilla Sreenivasulu",
+      "slots": ["F2", "TF2"],
+      "venue": "CB-109",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Chattu Kannaiah",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-107",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Tirumanadham N S Koti Manikumar",
+      "slots": ["B2", "TB2"],
+      "venue": "AB2-411",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Mohan Allam",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-138",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Nikita Ramachandra",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-109",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Rajesh Velpula",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-111",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Potharaju Ramesh",
+      "slots": ["F2", "TF2"],
+      "venue": "CB-107",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Marriboyina Sreedevi",
+      "slots": ["A2", "TA2"],
+      "venue": "AB1-416",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Prof.SENSE Dig Crs Faculty-1",
+      "slots": ["F1", "TF1"],
+      "venue": "AB1-414",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Nikita Ramachandra",
+      "slots": ["F2", "TF2"],
+      "venue": "AB1-414",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Madduluri Suneetha",
+      "slots": ["F2", "TF2"],
+      "venue": "AB1-409",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jonnadula Harikiran",
+      "slots": ["A2", "TA2"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Yallanti Sowjanya Kumari",
+      "slots": ["A2", "TA2"],
+      "venue": "AB1-417",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Posham Uppamma",
+      "slots": ["A2", "TA2"],
+      "venue": "AB1-420",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Battula Venkata Satish Babu",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-109",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Marriboyina Sreedevi",
+      "slots": ["B2", "TB2"],
+      "venue": "AB2-319",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Javvaji Venkata Kanaka Ratnam",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-G01",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Syamala Murali Krishna",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-405",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Yallanti Sowjanya Kumari",
+      "slots": ["B2", "TB2"],
+      "venue": "AB2-410",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Nandha Kumar R",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-133",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Karthika Natarajan",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-134",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Regonda Nagaraju",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-324",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Anil Kumar Nayak",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-G11",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Yathirajula Ramesh Babu",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-108",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Charulata Palai",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-G16",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Tata Gayathri",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-G17",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Samuka Mohanty",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-137",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Potharaju Ramesh",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-110",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Posham Uppamma",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-G11",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Balaraju Ramesh",
+      "slots": ["A2", "TA2"],
+      "venue": "AB1-421",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Prof.SCOPE Dig Crs Faculty-10",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-108",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Battula Venkata Satish Babu",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-323",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Arindam Dey",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-320",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Balaraju Ramesh",
+      "slots": ["B1", "TB1"],
+      "venue": "AB2-216",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Naresh Boda",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-323",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Javvaji Venkata Kanaka Ratnam",
+      "slots": ["B1", "TB1"],
+      "venue": "AB1-409",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Abdul Kayom Md Khairuzzaman",
+      "slots": ["F1", "TF1"],
+      "venue": "AB1-406",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Nikita Ramachandra",
+      "slots": ["F1", "TF1"],
+      "venue": "AB1-417",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Rajesh Velpula",
+      "slots": ["F1", "TF1"],
+      "venue": "AB1-135",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Chandan Nayak",
+      "slots": ["F2", "TF2"],
+      "venue": "AB1-323",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Marriboyina Sreedevi",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-301",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Regonda Nagaraju",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-414",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ravi Sankar Barpanda",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-G13",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Posham Uppamma",
+      "slots": ["B1", "TB1"],
+      "venue": "AB2-214",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Regonda Nagaraju",
+      "slots": ["B1", "TB1"],
+      "venue": "AB1-416",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Syamala Murali Krishna",
+      "slots": ["B1", "TB1"],
+      "venue": "AB1-417",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Mamilla Sreenivasulu",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-409",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Yathirajula Ramesh Babu",
+      "slots": ["F1", "TF1"],
+      "venue": "AB1-419",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pothi Reddy Krishna Mohan Reddy",
+      "slots": ["F2", "TF2"],
+      "venue": "CB-108",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jonnadula Harikiran",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ramkumar D",
+      "slots": ["B1", "TB1"],
+      "venue": "AB1-414",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Mukkoti Maruthi Venkata Chalapathi",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-G10",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sambhudutta Nanda",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-114",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pamulapati Ashok Reddy",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-135",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Syamala Murali Krishna",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-219",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Afzal Hussain Shahid",
+      "slots": ["A2", "TA2"],
+      "venue": "AB1-419",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pradeep Kumar Jena",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-G14",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jonnadula Harikiran",
+      "slots": ["B1", "TB1"],
+      "venue": "AB2-112",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Mukkoti Maruthi Venkata Chalapathi",
+      "slots": ["B1", "TB1"],
+      "venue": "AB1-406",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sambhudutta Nanda",
+      "slots": ["F1", "TF1"],
+      "venue": "AB1-137",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Deepasikha Mishra",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-135",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Tata Gayathri",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-219",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Charulata Palai",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-301",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Yathirajula Ramesh Babu",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-138",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Vangapandu Dhanunjaya Naidu",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-324",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Chandan Nayak",
+      "slots": ["F1", "TF1"],
+      "venue": "AB1-405",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Tata Gayathri",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-406",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Chattu Kannaiah",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-409",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Madduluri Suneetha",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Charulata Palai",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-324",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Battula Venkata Satish Babu",
+      "slots": ["B1", "TB1"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ramkumar D",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-320",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Balaraju Ramesh",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-134",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Swati Shukla",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-113",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Abdul Kayom Md Khairuzzaman",
+      "slots": ["F2", "TF2"],
+      "venue": "AB1-324",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Tirumanadham N S Koti Manikumar",
+      "slots": ["B1", "TB1"],
+      "venue": "AB2-215",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Yallanti Sowjanya Kumari",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-G02",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Nandha Kumar R",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-405",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ravi Sankar Barpanda",
+      "slots": ["B1", "TB1"],
+      "venue": "AB1-324",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Immadi Murali Krishna",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-G02",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Tirumanadham N S Koti Manikumar",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-133",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Hemant Kumar Reddy",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-G12",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Chattu Kannaiah",
+      "slots": ["B1", "TB1"],
+      "venue": "CB-G13",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Potharaju Ramesh",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-405",
+      "kind": "theory"
+    },
+    {
+      "faculty": "R.Sai Prasad Goud",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-107",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Saurabh Kharwar",
+      "slots": ["F1", "TF1"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Karthika Natarajan",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-G15",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pamulapati Ashok Reddy",
+      "slots": ["B1", "TB1"],
+      "venue": "AB2-218",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Swati Shukla",
+      "slots": ["F1", "TF1"],
+      "venue": "AB1-409",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Putta Durga",
+      "slots": ["A2", "TA2"],
+      "venue": "CB-G18",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Praveen Tiwari",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-414",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Chandan Nayak",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-320",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Abdul Kayom Md Khairuzzaman",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-417",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Praveen Tiwari",
+      "slots": ["E2", "TE2"],
+      "venue": "CB-G12",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Deepasikha Mishra",
+      "slots": ["B1", "TB1"],
+      "venue": "AB1-405",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sonia Das",
+      "slots": ["F2", "TF2"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "D. Paul Joseph",
+      "slots": ["B2", "TB2"],
+      "venue": "AB1-G11",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sonia Das",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-416",
+      "kind": "theory"
+    },
+    {
+      "faculty": "D. Paul Joseph",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-G10",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Hemant Kumar Reddy",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-137",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ravi Sankar Barpanda",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-138",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pradeep Kumar Jena",
+      "slots": ["A1", "TA1"],
+      "venue": "AB1-323",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Hemant Kumar Reddy",
+      "slots": ["B1", "TB1"],
+      "venue": "AB1-323",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Putta Durga",
+      "slots": ["B1", "TB1"],
+      "venue": "CB-G11",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Immadi Murali Krishna",
+      "slots": ["B1", "TB1"],
+      "venue": "CB-G12",
+      "kind": "theory"
+    },
+    {
+      "faculty": "R.Sai Prasad Goud",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-302",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pothi Reddy Krishna Mohan Reddy",
+      "slots": ["E1", "TE1"],
+      "venue": "AB1-406",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Rajesh Velpula",
+      "slots": ["L53", "L54"],
+      "venue": "CB-419",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Nikita Ramachandra",
+      "slots": ["L57", "L58"],
+      "venue": "CB-417",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Tirumanadham N S Koti Manikumar",
+      "slots": ["L5", "L6"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Prof.SENSE Dig Crs Faculty-1",
+      "slots": ["L25", "L26"],
+      "venue": "CB-405",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mohan Allam",
+      "slots": ["L29", "L30"],
+      "venue": "AB2-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sambhudutta Nanda",
+      "slots": ["L5", "L6"],
+      "venue": "CB-409",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ramkumar D",
+      "slots": ["L7", "L8"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Maheshuni Sankush Krishna",
+      "slots": ["L35", "L36"],
+      "venue": "CB-121",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Tirumanadham N S Koti Manikumar",
+      "slots": ["L47", "L48"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Marriboyina Sreedevi",
+      "slots": ["L11", "L12"],
+      "venue": "AB2-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Jonnadula Harikiran",
+      "slots": ["L13", "L14"],
+      "venue": "AB2-114",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mamilla Sreenivasulu",
+      "slots": ["L17", "L18"],
+      "venue": "CB-105",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Rajesh Velpula",
+      "slots": ["L19", "L20"],
+      "venue": "CB-409",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Marriboyina Sreedevi",
+      "slots": ["L25", "L26"],
+      "venue": "AB2-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Regonda Nagaraju",
+      "slots": ["L27", "L28"],
+      "venue": "AB1-304",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Posham Uppamma",
+      "slots": ["L33", "L34"],
+      "venue": "AB1-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Jayendra Kumar",
+      "slots": ["L41", "L42"],
+      "venue": "CB-105",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Marriboyina Sreedevi",
+      "slots": ["L53", "L54"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mamilla Sreenivasulu",
+      "slots": ["L57", "L58"],
+      "venue": "CB-416",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Hanumantharao Bitra",
+      "slots": ["L9", "L10"],
+      "venue": "CB-302",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Syamala Murali Krishna",
+      "slots": ["L15", "L16"],
+      "venue": "AB1-309",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Deepasikha Mishra",
+      "slots": ["L25", "L26"],
+      "venue": "AB2-114",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Anil Kumar Nayak",
+      "slots": ["L37", "L38"],
+      "venue": "CB-417",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Samuka Mohanty",
+      "slots": ["L3", "L4"],
+      "venue": "AB1-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Maheshuni Sankush Krishna",
+      "slots": ["L7", "L8"],
+      "venue": "CB-409",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Battula Venkata Satish Babu",
+      "slots": ["L9", "L10"],
+      "venue": "AB1-314",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Karthika Natarajan",
+      "slots": ["L17", "L18"],
+      "venue": "AB1-309",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Vangapandu Dhanunjaya Naidu",
+      "slots": ["L1", "L2"],
+      "venue": "CB-105",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Rajesh Velpula",
+      "slots": ["L27", "L28"],
+      "venue": "AB1-G32",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Jonnadula Harikiran",
+      "slots": ["L33", "L34"],
+      "venue": "AB1-309",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Yallanti Sowjanya Kumari",
+      "slots": ["L35", "L36"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Hemant Kumar Reddy",
+      "slots": ["L41", "L42"],
+      "venue": "AB1-309",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Maheshuni Sankush Krishna",
+      "slots": ["L53", "L54"],
+      "venue": "CB-105",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Vangapandu Dhanunjaya Naidu",
+      "slots": ["L5", "L6"],
+      "venue": "CB-101",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Chattu Kannaiah",
+      "slots": ["L17", "L18"],
+      "venue": "CB-106",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Battula Venkata Satish Babu",
+      "slots": ["L17", "L18"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Yallanti Sowjanya Kumari",
+      "slots": ["L23", "L24"],
+      "venue": "AB2-306",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Posham Uppamma",
+      "slots": ["L39", "L40"],
+      "venue": "AB2-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Balaraju Ramesh",
+      "slots": ["L41", "L42"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Syamala Murali Krishna",
+      "slots": ["L47", "L48"],
+      "venue": "AB1-309",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Chandan Nayak",
+      "slots": ["L47", "L48"],
+      "venue": "CB-105",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Balaraju Ramesh",
+      "slots": ["L15", "L16"],
+      "venue": "AB2-404",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Hemant Kumar Reddy",
+      "slots": ["L15", "L16"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Tata Gayathri",
+      "slots": ["L19", "L20"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Battula Venkata Satish Babu",
+      "slots": ["L1", "L2"],
+      "venue": "AB1-G32",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Yallanti Sowjanya Kumari",
+      "slots": ["L3", "L4"],
+      "venue": "AB1-G32",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Arindam Dey",
+      "slots": ["L45", "L46"],
+      "venue": "CB-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Nandha Kumar R",
+      "slots": ["L51", "L52"],
+      "venue": "AB1-119",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Charulata Palai",
+      "slots": ["L7", "L8"],
+      "venue": "AB1-309",
+      "kind": "lab"
+    },
+    {
+      "faculty": "G Bharath Reddy",
+      "slots": ["L23", "L24"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Javvaji Venkata Kanaka Ratnam",
+      "slots": ["L29", "L30"],
+      "venue": "AB2-301",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Anil Kumar Nayak",
+      "slots": ["L29", "L30"],
+      "venue": "CB-301",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Jonnadula Harikiran",
+      "slots": ["L37", "L38"],
+      "venue": "AB1-314",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ravi Sankar Barpanda",
+      "slots": ["L5", "L6"],
+      "venue": "AB1-G32",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pradeep Kumar Jena",
+      "slots": ["L13", "L14"],
+      "venue": "AB2-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Putta Durga",
+      "slots": ["L1", "L2"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Afzal Hussain Shahid",
+      "slots": ["L39", "L40"],
+      "venue": "AB1-314",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sonia Das",
+      "slots": ["L13", "L14"],
+      "venue": "CB-106",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sambhudutta Nanda",
+      "slots": ["L15", "L16"],
+      "venue": "CB-105",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Deepasikha Mishra",
+      "slots": ["L21", "L22"],
+      "venue": "AB1-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pothi Reddy Krishna Mohan Reddy",
+      "slots": ["L57", "L58"],
+      "venue": "CB-419",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pamulapati Ashok Reddy",
+      "slots": ["L23", "L24"],
+      "venue": "AB1-304",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ramkumar D",
+      "slots": ["L25", "L26"],
+      "venue": "AB2-119",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naresh Boda",
+      "slots": ["L45", "L46"],
+      "venue": "AB1-G32",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Balaraju Ramesh",
+      "slots": ["L49", "L50"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naresh Boda",
+      "slots": ["L53", "L54"],
+      "venue": "CB-106",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Charulata Palai",
+      "slots": ["L11", "L12"],
+      "venue": "AB1-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Tata Gayathri",
+      "slots": ["L3", "L4"],
+      "venue": "AB1-119",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Regonda Nagaraju",
+      "slots": ["L51", "L52"],
+      "venue": "AB1-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Anil Kumar Nayak",
+      "slots": ["L15", "L16"],
+      "venue": "CB-106",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Hemant Kumar Reddy",
+      "slots": ["L49", "L50"],
+      "venue": "AB1-G32",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Javvaji Venkata Kanaka Ratnam",
+      "slots": ["L21", "L22"],
+      "venue": "AB2-306",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mamilla Sreenivasulu",
+      "slots": ["L29", "L30"],
+      "venue": "CB-228",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Chattu Kannaiah",
+      "slots": ["L39", "L40"],
+      "venue": "AB2-301",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Madduluri Suneetha",
+      "slots": ["L57", "L58"],
+      "venue": "CB-101",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Posham Uppamma",
+      "slots": ["L37", "L38"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Madduluri Suneetha",
+      "slots": ["L3", "L4"],
+      "venue": "CB-101",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pothi Reddy Krishna Mohan Reddy",
+      "slots": ["L43", "L44"],
+      "venue": "CB-416",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pavan Kumar Y V",
+      "slots": ["L23", "L24"],
+      "venue": "AB1-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Chattu Kannaiah",
+      "slots": ["L33", "L34"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Putta Durga",
+      "slots": ["L21", "L22"],
+      "venue": "AB2-404",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Charulata Palai",
+      "slots": ["L27", "L28"],
+      "venue": "AB1-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Swati Shukla",
+      "slots": ["L51", "L52"],
+      "venue": "CB-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Vangapandu Dhanunjaya Naidu",
+      "slots": ["L55", "L56"],
+      "venue": "CB-209",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pavan Kumar Y V",
+      "slots": ["L9", "L10"],
+      "venue": "CB-303",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sambhudutta Nanda",
+      "slots": ["L37", "L38"],
+      "venue": "CB-419",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ravi Sankar Barpanda",
+      "slots": ["L41", "L42"],
+      "venue": "AB1-G32",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Swati Shukla",
+      "slots": ["L33", "L34"],
+      "venue": "CB-417",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Swati Shukla",
+      "slots": ["L11", "L12"],
+      "venue": "CB-121",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Anil Kumar Nayak",
+      "slots": ["L49", "L50"],
+      "venue": "CB-105",
+      "kind": "lab"
+    },
+    {
+      "faculty": "D. Paul Joseph",
+      "slots": ["L35", "L36"],
+      "venue": "AB1-309",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mukkoti Maruthi Venkata Chalapathi",
+      "slots": ["L51", "L52"],
+      "venue": "AB1-319",
+      "kind": "lab"
+    },
+    {
+      "faculty": "D. Paul Joseph",
+      "slots": ["L19", "L20"],
+      "venue": "AB1-309",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mukkoti Maruthi Venkata Chalapathi",
+      "slots": ["L31", "L32"],
+      "venue": "AB2-306",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Syamala Murali Krishna",
+      "slots": ["L37", "L38"],
+      "venue": "AB2-306",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Immadi Murali Krishna",
+      "slots": ["L45", "L46"],
+      "venue": "CB-302",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Abdul Kayom Md Khairuzzaman",
+      "slots": ["L43", "L44"],
+      "venue": "CB-121",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Nandha Kumar R",
+      "slots": ["L31", "L32"],
+      "venue": "AB1-314",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Tirumanadham N S Koti Manikumar",
+      "slots": ["L31", "L32"],
+      "venue": "AB2-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sonia Das",
+      "slots": ["L43", "L44"],
+      "venue": "CB-417",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pradeep Kumar Jena",
+      "slots": ["L27", "L28"],
+      "venue": "AB1-119",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naresh Boda",
+      "slots": ["L31", "L32"],
+      "venue": "CB-105",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sonia Das",
+      "slots": ["L55", "L56"],
+      "venue": "CB-228",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Immadi Murali Krishna",
+      "slots": ["L13", "L14"],
+      "venue": "AB1-119",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pamulapati Ashok Reddy",
+      "slots": ["L39", "L40"],
+      "venue": "AB2-119",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mamilla Sreenivasulu",
+      "slots": ["L43", "L44"],
+      "venue": "CB-209",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ravi Sankar Barpanda",
+      "slots": ["L49", "L50"],
+      "venue": "AB1-119",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Saurabh Kharwar",
+      "slots": ["L55", "L56"],
+      "venue": "CB-122",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Madduluri Suneetha",
+      "slots": ["L55", "L56"],
+      "venue": "CB-202",
+      "kind": "lab"
+    }
+  ]
+}

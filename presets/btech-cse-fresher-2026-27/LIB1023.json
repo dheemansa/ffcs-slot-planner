@@ -1,0 +1,529 @@
+{
+  "code": "LIB1023",
+  "name": "Indian Studies",
+  "source": "LIB1023.pdf",
+  "options": [
+    {
+      "faculty": "Krishna Priya B",
+      "slots": ["L5", "L6"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Joseph Alugula",
+      "slots": ["L5", "L6"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sajad Nabi Dar",
+      "slots": ["L35", "L36"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ramshin Rahiman",
+      "slots": ["L3", "L4"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sajad Nabi Dar",
+      "slots": ["L45", "L46"],
+      "venue": "ONL01007",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Chandan Vishwas",
+      "slots": ["L13", "L14"],
+      "venue": "ONL01001",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sajad Nabi Dar",
+      "slots": ["L21", "L22"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mohammad Amin Wani",
+      "slots": ["L23", "L24"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kanaka Himabindu Pottumuthu",
+      "slots": ["L11", "L12"],
+      "venue": "ONL01001",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Suresh Garimella",
+      "slots": ["L19", "L20"],
+      "venue": "ONL01001",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Tanmoy Das",
+      "slots": ["L29", "L30"],
+      "venue": "ONL01001",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Tanmoy Das",
+      "slots": ["L45", "L46"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Suresh Garimella",
+      "slots": ["L13", "L14"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "A S Arunkumar",
+      "slots": ["L15", "L16"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Aishwarya Dhawan",
+      "slots": ["L23", "L24"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Uzma Azam",
+      "slots": ["L27", "L28"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Joseph Alugula",
+      "slots": ["L29", "L30"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naveen Kumar Cherupelly",
+      "slots": ["L41", "L42"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Renuprasad Hemkiran Patki",
+      "slots": ["L47", "L48"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kanaka Himabindu Pottumuthu",
+      "slots": ["L15", "L16"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "A S Arunkumar",
+      "slots": ["L29", "L30"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Krishna Priya B",
+      "slots": ["L3", "L4"],
+      "venue": "ONL01001",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ritesh Ranjan",
+      "slots": ["L57", "L58"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Renuprasad Hemkiran Patki",
+      "slots": ["L11", "L12"],
+      "venue": "ONL01007",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Abdul Mohsin",
+      "slots": ["L19", "L20"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sajad Nabi Dar",
+      "slots": ["L27", "L28"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Suresh Jagannadham",
+      "slots": ["L35", "L36"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Dheeraj Kumar",
+      "slots": ["L51", "L52"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ritesh Ranjan",
+      "slots": ["L9", "L10"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Swatilekha Sen",
+      "slots": ["L27", "L28"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Abdul Mohsin",
+      "slots": ["L27", "L28"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naveen Kumar Ranjan",
+      "slots": ["L35", "L36"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ganesh Moolinti",
+      "slots": ["L13", "L14"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Charu Waliyan",
+      "slots": ["L17", "L18"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naveen Kumar Ranjan",
+      "slots": ["L19", "L20"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naveen Kumar Ranjan",
+      "slots": ["L23", "L24"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Joseph Alugula",
+      "slots": ["L37", "L38"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kanaka Himabindu Pottumuthu",
+      "slots": ["L3", "L4"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sarath Sasikumar",
+      "slots": ["L51", "L52"],
+      "venue": "ONL01001",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Swatilekha Sen",
+      "slots": ["L15", "L16"],
+      "venue": "ONL01007",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Renuprasad Hemkiran Patki",
+      "slots": ["L33", "L34"],
+      "venue": "ONL01008",
+      "kind": "lab"
+    },
+    {
+      "faculty": "K Kinjari",
+      "slots": ["L37", "L38"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Halavath Rajesh",
+      "slots": ["L7", "L8"],
+      "venue": "ONL01008",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ajmal S Rasaq",
+      "slots": ["L17", "L18"],
+      "venue": "ONL01001",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Soumik Sarkar",
+      "slots": ["L23", "L24"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Suresh Jagannadham",
+      "slots": ["L41", "L42"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ajmal S Rasaq",
+      "slots": ["L45", "L46"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Suresh Jagannadham",
+      "slots": ["L47", "L48"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Suresh Garimella",
+      "slots": ["L49", "L50"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Tanmoy Das",
+      "slots": ["L51", "L52"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Velmala Sharath Kumar",
+      "slots": ["L43", "L44"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Uzma Azam",
+      "slots": ["L57", "L58"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naveen Kumar Cherupelly",
+      "slots": ["L5", "L6"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sarath Sasikumar",
+      "slots": ["L39", "L40"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Velmala Sharath Kumar",
+      "slots": ["L55", "L56"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Aysha Thasleema K S",
+      "slots": ["L33", "L34"],
+      "venue": "ONL01004",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Krishna Priya B",
+      "slots": ["L55", "L56"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Aysha Thasleema K S",
+      "slots": ["L55", "L56"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Chandan Vishwas",
+      "slots": ["L21", "L22"],
+      "venue": "ONL01001",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Krishna Priya B",
+      "slots": ["L37", "L38"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ritesh Ranjan",
+      "slots": ["L39", "L40"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ganesh Moolinti",
+      "slots": ["L53", "L54"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Srabani Chakraborty",
+      "slots": ["L43", "L44"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Dheeraj Kumar",
+      "slots": ["L49", "L50"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Velmala Sharath Kumar",
+      "slots": ["L53", "L54"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Anindita Roy",
+      "slots": ["L25", "L26"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naveen Kumar Ranjan",
+      "slots": ["L41", "L42"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Abdul Mohsin",
+      "slots": ["L17", "L18"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Monika Srivastava",
+      "slots": ["L21", "L22"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ajmal S Rasaq",
+      "slots": ["L39", "L40"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "K. Deepanjan",
+      "slots": ["L37", "L38"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Abdul Mohsin",
+      "slots": ["L31", "L32"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Swatilekha Sen",
+      "slots": ["L33", "L34"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Charu Waliyan",
+      "slots": ["L7", "L8"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "A S Arunkumar",
+      "slots": ["L43", "L44"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Suresh Jagannadham",
+      "slots": ["L25", "L26"],
+      "venue": "ONL01008",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Srabani Chakraborty",
+      "slots": ["L9", "L10"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Srabani Chakraborty",
+      "slots": ["L29", "L30"],
+      "venue": "ONL01005",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Halavath Rajesh",
+      "slots": ["L25", "L26"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Suresh Jagannadham",
+      "slots": ["L31", "L32"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Srabani Chakraborty",
+      "slots": ["L49", "L50"],
+      "venue": "ONL01008",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Charu Waliyan",
+      "slots": ["L53", "L54"],
+      "venue": "ONL01002",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Suresh Jagannadham",
+      "slots": ["L55", "L56"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Naveen Kumar Cherupelly",
+      "slots": ["L11", "L12"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Monika Srivastava",
+      "slots": ["L31", "L32"],
+      "venue": "ONL01001",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Monika Srivastava",
+      "slots": ["L51", "L52"],
+      "venue": "ONL01006",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Halavath Rajesh",
+      "slots": ["L57", "L58"],
+      "venue": "ONL01003",
+      "kind": "lab"
+    }
+  ]
+}

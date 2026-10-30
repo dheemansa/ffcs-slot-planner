@@ -1,0 +1,397 @@
+{
+  "code": "MAT1002",
+  "name": "Applications of Differential and Difference Equations",
+  "source": "MAT1002.pdf",
+  "options": [
+    {
+      "faculty": "Prashant Patel",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB2-105",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Narendra Kumar",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB1-417",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ravi Kumar Bandaru",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB2-118",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jyotsna Sharma",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB1-419",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sk Ashadul Rahaman",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-G19",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Reetika Chawla",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-220",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Abhilash Chand",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ravi Kumar Bandaru",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-105",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Bihalan Bhattacharya",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-319",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Arpita Devi",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB1-320",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Reddimalla Naresh",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-111",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Santi Ranjan Das",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "CB-111",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Prakash S",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-118",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Vemula Ramakrishna Reddy",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-112",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Parul Saini",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "CB-110",
+      "kind": "theory"
+    },
+    {
+      "faculty": "K. Panduranga",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB1-416",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ramasamy Kavikumar",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB1-G01",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Raja Solanki",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB1-G02",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kavya R Nair",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-313",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Rohit Verma",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-317",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Chiranjeev Kumar Shahu",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB2-111",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Prashant Patel",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "CB-G17",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Abhik Digar",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-101",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sowndarrajan P T",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB1-421",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sk Ashadul Rahaman",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB1-137",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Amrendra Singh Gill",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB2-317",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Lisna PC",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB2-102",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Bihalan Bhattacharya",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-212",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Prakash S",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB2-118",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Nimai Sarkar",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB2-212",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Raja Solanki",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-102",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jyotsna Sharma",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB1-135",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Chiranjeev Kumar Shahu",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "CB-G16",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Narendra Kumar",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "CB-G14",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Parul Saini",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB1-G02",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Parveen",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB1-420",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Satyanarayana Badeti",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-215",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Arpita Devi",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-216",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Satyendra Singh Chauhan",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-212",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Santi Ranjan Das",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB1-G11",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Abhilash Chand",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-218",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Varunkumar Merugu",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB2-101",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sowndarrajan P T",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB1-G10",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ramasamy Kavikumar",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-118",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Dibyendu Sekhar Mandal",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB2-105",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kavya R Nair",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-317",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Abhik Digar",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-105",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jyotirmoy Roy",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-318",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Reddimalla Naresh",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB2-101",
+      "kind": "theory"
+    },
+    {
+      "faculty": "K. Panduranga",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-G19",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Archana Tiwari",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-214",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Rohit Verma",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB2-G17",
+      "kind": "theory"
+    },
+    {
+      "faculty": "A. Ramesh",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "CB-G18",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Nimai Sarkar",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "CB-G15",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Parveen",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-111",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kottu Durga Prasad",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-102",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Rama Krishna Rongali",
+      "slots": ["A2", "TA2", "TAA2"],
+      "venue": "AB2-312",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Varunkumar Merugu",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB1-G01",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kottu Durga Prasad",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB2-102",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jyotirmoy Roy",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB1-133",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Akshay Kumar",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB1-134",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Archana Tiwari",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB2-G14",
+      "kind": "theory"
+    },
+    {
+      "faculty": "A. Ramesh",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "CB-109",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Debgopal Sahoo",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB2-313",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Akshay Kumar",
+      "slots": ["B2", "TB2", "TBB2"],
+      "venue": "AB2-312",
+      "kind": "theory"
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "code": "ECE1002",
+  "name": "Fundamentals of Electrical and Electronics Engineering",
+  "source": "ECE1002.pdf",
+  "options": [
+    {
+      "faculty": "Yarlagadda Raghuvamsi",
+      "slots": ["C2", "TCC2"],
+      "venue": "AB1-134",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Emandi Jagadeeswara Rao",
+      "slots": ["D2", "TD2"],
+      "venue": "AB1-420",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Mullapudi Siva",
+      "slots": ["D2", "TD2"],
+      "venue": "AB1-409",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sivakavi Naga Venkata Bramareswara Rao",
+      "slots": ["C2", "TC2"],
+      "venue": "AB1-419",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pulluri Harish",
+      "slots": ["C2", "TCC2"],
+      "venue": "AB1-135",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Duvvuri Sri Satya Sita Rama Sarath Babu",
+      "slots": ["C2", "TC2"],
+      "venue": "AB1-417",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Duvvuri Sri Satya Sita Rama Sarath Babu",
+      "slots": ["D1", "TD1"],
+      "venue": "AB1-417",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pulluri Harish",
+      "slots": ["D2", "TD2"],
+      "venue": "AB1-414",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kumar Vaibhav Tejan",
+      "slots": ["C2", "TC2"],
+      "venue": "AB1-414",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Emandi Jagadeeswara Rao",
+      "slots": ["C2", "TC2"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Emandi Jagadeeswara Rao",
+      "slots": ["D1", "TD1"],
+      "venue": "AB1-416",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Karumanchi Beulah Sujan",
+      "slots": ["C2", "TC2"],
+      "venue": "AB1-416",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sivakavi Naga Venkata Bramareswara Rao",
+      "slots": ["D1", "TD1"],
+      "venue": "AB1-419",
+      "kind": "theory"
+    },
+    {
+      "faculty": "M. Krishnasamy",
+      "slots": ["D2", "TD2"],
+      "venue": "AB1-419",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kiran Kumar Nallamekala",
+      "slots": ["C2", "TC2"],
+      "venue": "AB1-409",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kranthi Kumar Reddy Missal",
+      "slots": ["D2", "TDD2"],
+      "venue": "AB1-301",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kiran Kumar Nallamekala",
+      "slots": ["D1", "TD1"],
+      "venue": "AB1-406",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Moumita Saha",
+      "slots": ["D2", "TD2"],
+      "venue": "AB1-417",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Koyyana Srinivasa Rao",
+      "slots": ["D1", "TD1"],
+      "venue": "AB1-414",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pulluri Harish",
+      "slots": ["C1", "TC1"],
+      "venue": "AB1-409",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Krishnendu K",
+      "slots": ["D2", "TD2"],
+      "venue": "AB1-416",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Arkdev",
+      "slots": ["D2", "TD2"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Mullapudi Siva",
+      "slots": ["C1", "TC1"],
+      "venue": "AB1-417",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Yarlagadda Raghuvamsi",
+      "slots": ["D1", "TD1"],
+      "venue": "AB1-405",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Karumanchi Beulah Sujan",
+      "slots": ["D1", "TD1"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jayashree Pradhan",
+      "slots": ["D2", "TDD2"],
+      "venue": "AB1-219",
+      "kind": "theory"
+    },
+    {
+      "faculty": "M. Krishnasamy",
+      "slots": ["C1", "TC1"],
+      "venue": "AB1-324",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Krishnendu K",
+      "slots": ["C2", "TC2"],
+      "venue": "AB1-421",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Meera Patel",
+      "slots": ["D2", "TD2"],
+      "venue": "AB1-406",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kumar Vaibhav Tejan",
+      "slots": ["C1", "TC1"],
+      "venue": "AB1-414",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ankur Pandey",
+      "slots": ["C2", "TC2"],
+      "venue": "AB1-406",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Meera Patel",
+      "slots": ["C1", "TC1"],
+      "venue": "AB1-416",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Krishnendu K",
+      "slots": ["D1", "TDD1"],
+      "venue": "AB1-219",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ankur Pandey",
+      "slots": ["D1", "TD1"],
+      "venue": "AB1-324",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ankur Pandey",
+      "slots": ["C1", "TCC1"],
+      "venue": "AB1-G10",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Arkdev",
+      "slots": ["C1", "TC1"],
+      "venue": "AB1-419",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jayashree Pradhan",
+      "slots": ["C1", "TC1"],
+      "venue": "AB1-406",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Lavati Hemanth Krishna",
+      "slots": ["C1", "TC1"],
+      "venue": "AB1-415",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Kranthi Kumar Reddy Missal",
+      "slots": ["C1", "TCC1"],
+      "venue": "AB1-133",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Lavati Hemanth Krishna",
+      "slots": ["C2", "TC2"],
+      "venue": "AB1-420",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pavan Kumar Y V",
+      "slots": ["D1", "TD1"],
+      "venue": "AB1-409",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Lavati Hemanth Krishna",
+      "slots": ["D1", "TDD1"],
+      "venue": "AB1-133",
+      "kind": "theory"
+    },
+
+    {
+      "faculty": "Karumanchi Beulah Sujan",
+      "slots": ["L3", "L4"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "G D V Santhosh Kumar",
+      "slots": ["L5", "L6"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kiran Kumar Nallamekala",
+      "slots": ["L27", "L28"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sivakavi Naga Venkata Bramareswara Rao",
+      "slots": ["L55", "L56"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Hanumantharao Bitra",
+      "slots": ["L5", "L6"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Karumanchi Beulah Sujan",
+      "slots": ["L41", "L42"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kranthi Kumar Reddy Missal",
+      "slots": ["L7", "L8"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Koyyana Srinivasa Rao",
+      "slots": ["L27", "L28"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Koyyana Srinivasa Rao",
+      "slots": ["L55", "L56"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Yarlagadda Raghuvamsi",
+      "slots": ["L51", "L52"],
+      "venue": "AB2-211",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kiran Kumar Nallamekala",
+      "slots": ["L13", "L14"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sivakavi Naga Venkata Bramareswara Rao",
+      "slots": ["L1", "L2"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pulluri Harish",
+      "slots": ["L23", "L24"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Arkdev",
+      "slots": ["L35", "L36"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Yarlagadda Raghuvamsi",
+      "slots": ["L21", "L22"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mullapudi Siva",
+      "slots": ["L23", "L24"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kumar Vaibhav Tejan",
+      "slots": ["L29", "L30"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kranthi Kumar Reddy Missal",
+      "slots": ["L47", "L48"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "M. Krishnasamy",
+      "slots": ["L11", "L12"],
+      "venue": "AB2-211",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Jayashree Pradhan",
+      "slots": ["L19", "L20"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kranthi Kumar Reddy Missal",
+      "slots": ["L3", "L4"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sivakavi Naga Venkata Bramareswara Rao",
+      "slots": ["L9", "L10"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Moumita Saha",
+      "slots": ["L25", "L26"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Yarlagadda Raghuvamsi",
+      "slots": ["L45", "L46"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Mullapudi Siva",
+      "slots": ["L39", "L40"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Moumita Saha",
+      "slots": ["L15", "L16"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Duvvuri Sri Satya Sita Rama Sarath Babu",
+      "slots": ["L29", "L30"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "M. Krishnasamy",
+      "slots": ["L51", "L52"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "M. Krishnasamy",
+      "slots": ["L15", "L16"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pavan Kumar Y V",
+      "slots": ["L33", "L34"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Jayashree Pradhan",
+      "slots": ["L57", "L58"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Meera Patel",
+      "slots": ["L33", "L34"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kuntal Chakraborty",
+      "slots": ["L53", "L54"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "G D V Santhosh Kumar",
+      "slots": ["L43", "L44"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Arkdev",
+      "slots": ["L49", "L50"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Meera Patel",
+      "slots": ["L49", "L50"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Moumita Saha",
+      "slots": ["L39", "L40"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Arkdev",
+      "slots": ["L9", "L10"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Karumanchi Beulah Sujan",
+      "slots": ["L31", "L32"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Jayashree Pradhan",
+      "slots": ["L17", "L18"],
+      "venue": "AB1-115",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Meera Patel",
+      "slots": ["L31", "L32"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Kiran Kumar Nallamekala",
+      "slots": ["L37", "L38"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Duvvuri Sri Satya Sita Rama Sarath Babu",
+      "slots": ["L37", "L38"],
+      "venue": "AB2-211",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pavan Kumar Y V",
+      "slots": ["L43", "L44"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pavan Kumar Y V",
+      "slots": ["L45", "L46"],
+      "venue": "AB2-219",
+      "kind": "lab"
+    }
+  ]
+}

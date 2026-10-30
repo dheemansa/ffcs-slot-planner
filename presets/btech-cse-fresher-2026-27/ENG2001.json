@@ -1,0 +1,338 @@
+{
+  "code": "ENG2001",
+  "name": "English for Professional Communication",
+  "source": "ENG2001.pdf",
+  "options": [
+    {
+      "faculty": "Purnendu Bikash Debnath",
+      "slots": ["G2"],
+      "venue": "AB2-105",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Arghya Chakraborty",
+      "slots": ["G2"],
+      "venue": "AB2-G14",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Chandini Stephens",
+      "slots": ["D2"],
+      "venue": "AB2-G17",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Rasheda Parveen",
+      "slots": ["G1"],
+      "venue": "AB2-G17",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Rakhi N K",
+      "slots": ["D2"],
+      "venue": "AB2-G19",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sinjini Chakraborty",
+      "slots": ["D2"],
+      "venue": "AB2-220",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Arghya Chakraborty",
+      "slots": ["E2"],
+      "venue": "AB2-212",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Soumyadeep Chakraborty",
+      "slots": ["E2"],
+      "venue": "AB2-102",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Raghavi R K",
+      "slots": ["E2"],
+      "venue": "AB2-105",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Pragnya Parimita Chayani",
+      "slots": ["G1"],
+      "venue": "AB1-G10",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Neethu P Antony",
+      "slots": ["G2"],
+      "venue": "AB2-G17",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Srirupa Poddar",
+      "slots": ["E1"],
+      "venue": "AB2-212",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Anupama A.P",
+      "slots": ["D1"],
+      "venue": "AB2-G17",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Rakhi N K",
+      "slots": ["E1"],
+      "venue": "AB2-105",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Udita Banerjee",
+      "slots": ["E2"],
+      "venue": "AB2-111",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Amar Wayal",
+      "slots": ["G2"],
+      "venue": "AB2-G19",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Vishnu V",
+      "slots": ["D2"],
+      "venue": "AB1-G01",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Arunava Acharya",
+      "slots": ["E2"],
+      "venue": "AB2-G17",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Manisha Bhadran",
+      "slots": ["E1"],
+      "venue": "AB2-G17",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sruthi Sasidharan",
+      "slots": ["D1"],
+      "venue": "AB2-212",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Ritu Varghese",
+      "slots": ["G1"],
+      "venue": "AB2-G14",
+      "kind": "theory"
+    },
+    {
+      "faculty": "P Arul Nehru",
+      "slots": ["G1"],
+      "venue": "AB1-G02",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Arunava Acharya",
+      "slots": ["D1"],
+      "venue": "CB-112",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sharanya Ghosh",
+      "slots": ["D1"],
+      "venue": "AB2-G19",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sharanya Ghosh",
+      "slots": ["G1"],
+      "venue": "AB2-G19",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Sruthi Sasidharan",
+      "slots": ["E1"],
+      "venue": "AB2-G14",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Jabeen Yasmeen",
+      "slots": ["E1"],
+      "venue": "AB2-G19",
+      "kind": "theory"
+    },
+
+    {
+      "faculty": "Anindita Shome",
+      "slots": ["L5", "L6"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ramesh Kumar Mahtha",
+      "slots": ["L35", "L36"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Neelima Adapa",
+      "slots": ["L45", "L46"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Neethu P Antony",
+      "slots": ["L27", "L28"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ramesh Kumar Mahtha",
+      "slots": ["L47", "L48"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Neelima Adapa",
+      "slots": ["L3", "L4"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Neelima Adapa",
+      "slots": ["L9", "L10"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Soumyadeep Chakraborty",
+      "slots": ["L53", "L54"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sruthi Sasidharan",
+      "slots": ["L13", "L14"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Purnendu Bikash Debnath",
+      "slots": ["L55", "L56"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Karishma Bisht",
+      "slots": ["L1", "L2"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pragya Sengupta",
+      "slots": ["L29", "L30"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Srirupa Poddar",
+      "slots": ["L7", "L8"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Arunava Acharya",
+      "slots": ["L41", "L42"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pragya Sengupta",
+      "slots": ["L57", "L58"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Neethu P Antony",
+      "slots": ["L23", "L24"],
+      "venue": "AB2-117",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Amar Wayal",
+      "slots": ["L15", "L16"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Shubhra Ghoshal",
+      "slots": ["L19", "L20"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Pragnya Parimita Chayani",
+      "slots": ["L43", "L44"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Sharanya Ghosh",
+      "slots": ["L25", "L26"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Amar Wayal",
+      "slots": ["L51", "L52"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Tannistha Dasgupta",
+      "slots": ["L31", "L32"],
+      "venue": "AB2-117",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Deepjoy Katuwal",
+      "slots": ["L31", "L32"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Arpana Venu",
+      "slots": ["L11", "L12"],
+      "venue": "AB2-117",
+      "kind": "lab"
+    },
+    {
+      "faculty": "P Arul Nehru",
+      "slots": ["L33", "L34"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Inzamul Sarkar",
+      "slots": ["L49", "L50"],
+      "venue": "AB2-117",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Ann Mary George",
+      "slots": ["L21", "L22"],
+      "venue": "AB1-221",
+      "kind": "lab"
+    },
+    {
+      "faculty": "Farooq Ahmad Mir",
+      "slots": ["L39", "L40"],
+      "venue": "AB2-117",
+      "kind": "lab"
+    }
+  ]
+}
