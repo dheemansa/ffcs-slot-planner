@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Plan your FFCS timetable and check slot clashes." />
+    <meta name="theme-color" content="#ffffff" />
+    <title>FFCS Slot Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="assets/slot-planner.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="top-in">
+        <button
+          class="icon-btn"
+          id="menuBtn"
+          data-act="open-drawer"
+          aria-label="Open subjects"
+          aria-controls="drawer"
+          aria-expanded="false"
+        >
+          <span class="ms">menu</span>
+        </button>
+        <div class="brand">
+          <span class="logo"><span class="ms">calendar_month</span></span
+          ><b>FFCS Slot Planner</b>
+        </div>
+        <span class="crumb" id="crumb" hidden></span>
+        <span class="grow"></span>
+        <span class="stat idle" id="stat"></span>
+        <button
+          class="icon-btn"
+          id="themeBtn"
+          data-act="theme"
+          aria-label="Switch theme"
+        ></button>
+        <button class="btn primary" data-act="open-sheet">
+          <span class="ms" style="font-size: 18px">content_copy</span
+          ><span class="hide-s">Summary</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="scrim" id="scrim" data-act="close-drawer"></div>
+    <aside class="drawer" id="drawer" aria-label="Subjects" aria-hidden="true">
+      <div class="d-head">
+        <b>Subjects</b>
+        <button
+          class="icon-btn"
+          data-act="close-drawer"
+          aria-label="Close subjects"
+        >
+          <span class="ms">close</span>
+        </button>
+      </div>
+      <div class="d-body" id="dList"></div>
+      <form class="d-add" data-form="add-subject" hidden>
+        <label class="lbl" for="newSubD"
+          >Add a subject
+          <input
+            class="field"
+            id="newSubD"
+            name="name"
+            placeholder="e.g. Operating Systems or CSE2005"
+            autocomplete="off"
+          />
+        </label>
+        <button class="btn primary" type="submit">
+          <span class="ms" style="font-size: 18px">add</span>Add subject
+        </button>
+      </form>
+      <div class="d-reset">
+        <button class="btn" type="button" data-act="reset-plan">
+          <span class="ms" style="font-size: 18px">restart_alt</span>Reset plan to preset
+        </button>
+      </div>
+    </aside>
+
+    <main class="wrap">
+      <div class="app">
+        <section
+          class="panel"
+          id="panel"
+          aria-label="Faculty and slots"
+        ></section>
+        <section class="board" id="board" aria-label="Timetable"></section>
+      </div>
+    </main>
+
+    <div class="sheet" id="sheet" hidden>
+      <div
+        class="sheet-in"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sheetT"
+      >
+        <h3 id="sheetT">Your plan</h3>
+        <pre id="sheetPre"></pre>
+        <div class="acts">
+          <button class="btn" data-act="close-sheet">Close</button>
+          <button class="btn primary" data-act="copy-sheet">
+            <span class="ms" style="font-size: 18px">content_copy</span>Copy
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="assets/js/planner-app.js"></script>
+  </body>
+</html>
