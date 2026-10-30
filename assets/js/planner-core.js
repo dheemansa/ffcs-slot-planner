@@ -1,11 +1,11 @@
 /* ---------- Slot chart (edit here if your campus chart differs) ---------- */
-        const DAYS = ["MON", "TUE", "WED", "THU", "FRI"];
+        const DAYS = ["TUE", "WED", "THU", "FRI", "SAT"];
         const DAYNAME = {
-          MON: "Mon",
           TUE: "Tue",
           WED: "Wed",
           THU: "Thu",
           FRI: "Fri",
+          SAT: "Sat",
         };
         const TH_TIMES = [
           ["08:00", "08:50"],
@@ -34,8 +34,8 @@
           ["18:31", "19:20"],
         ];
         const THEORY = {
-          MON: ["A1", "F1", "D1", "TB1", "TG1", "A2", "F2", "D2", "TB2", "TG2"],
-          TUE: [
+          TUE: ["A1", "F1", "D1", "TB1", "TG1", "A2", "F2", "D2", "TB2", "TG2"],
+          WED: [
             "B1",
             "G1",
             "E1",
@@ -47,8 +47,8 @@
             "TC2",
             "TAA2",
           ],
-          WED: ["C1", "A1", "F1", "V1", "V2", "C2", "A2", "F2", "TD2", "TBB2"],
-          THU: [
+          THU: ["C1", "A1", "F1", "V1", "V2", "C2", "A2", "F2", "TD2", "TBB2"],
+          FRI: [
             "D1",
             "B1",
             "G1",
@@ -60,7 +60,7 @@
             "TE2",
             "TCC2",
           ],
-          FRI: [
+          SAT: [
             "E1",
             "C1",
             "TA1",
@@ -74,11 +74,11 @@
           ],
         };
         const LAB_START = {
-          MON: [1, 31],
-          TUE: [7, 37],
-          WED: [13, 43],
-          THU: [19, 49],
-          FRI: [25, 55],
+          TUE: [1, 31],
+          WED: [7, 37],
+          THU: [13, 43],
+          FRI: [19, 49],
+          SAT: [25, 55],
         };
 
         const mins = (t) => {
