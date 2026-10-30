@@ -392,6 +392,18 @@
       "slots": ["B2", "TB2", "TBB2"],
       "venue": "AB2-312",
       "kind": "theory"
+    },
+    {
+      "faculty": "Reetika Chawla",
+      "slots": ["B1", "TB1", "TBB1"],
+      "venue": "AB2-G19",
+      "kind": "theory"
+    },
+    {
+      "faculty": "Debgopal Sahoo",
+      "slots": ["A1", "TA1", "TAA1"],
+      "venue": "AB2-101",
+      "kind": "theory"
     }
   ]
 }
