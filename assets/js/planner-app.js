@@ -800,23 +800,69 @@ function renderTop(an) {
             '</span>';
     } else c.hidden = true;
     const st = $('#stat');
-    const placed = state.subjects.filter((x) => x.sel.theory || x.sel.lab).length;
-    if (an.count) {
-        st.className = 'stat bad';
-        st.innerHTML = icon('error', 16) + an.count + (an.count === 1 ? ' clash' : ' clashes');
-    } else if (an.items.length) {
-        st.className = 'stat';
-        st.innerHTML =
-            icon('check_circle', 16) +
-            'No clashes · ' +
-            placed +
+    const indicator = (group, name) => {
+        const applicable = state.subjects.filter((subject) =>
+            subject.options.some((option) => groupOf(option) === group)
+        );
+        const chosen = applicable.filter((subject) =>
+            subject.options.some(
+                (option) => groupOf(option) === group && option.id === subject.sel[group]
+            )
+        );
+        const remaining = applicable.filter((subject) => !chosen.includes(subject));
+        const subjectList = (subjects) =>
+            subjects.length
+                ? '<ul>' +
+                  subjects
+                      .map(
+                          (subject) =>
+                              '<li style="--sc:' +
+                              subject.color +
+                              '">' +
+                              esc(subject.name) +
+                              '</li>'
+                      )
+                      .join('') +
+                  '</ul>'
+                : '<p>None</p>';
+        return (
+            '<span class="stat-part ' +
+            group +
+            '" tabindex="0" aria-describedby="stat-' +
+            group +
+            '-tooltip">' +
+            name +
+            ' ' +
+            chosen.length +
             '/' +
-            state.subjects.length +
-            ' placed';
-    } else {
-        st.className = 'stat idle';
-        st.textContent = 'Nothing picked';
-    }
+            applicable.length +
+            '<span class="stat-tooltip" id="stat-' +
+            group +
+            '-tooltip" role="tooltip"><b>' +
+            name +
+            ' chosen</b>' +
+            subjectList(chosen) +
+            '<b>' +
+            name +
+            ' left to choose</b>' +
+            subjectList(remaining) +
+            '</span>' +
+            '</span>'
+        );
+    };
+    st.className = 'stat';
+    st.innerHTML =
+        indicator('theory', 'Theory') +
+        indicator('lab', 'Lab') +
+        (an.count
+            ? '<span class="stat-clashes" title="' +
+              an.count +
+              (an.count === 1 ? ' clash' : ' clashes') +
+              '">' +
+              icon('error', 16) +
+              an.count +
+              '</span>'
+            : '');
 }
 function render() {
     const an = analyse();

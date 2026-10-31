@@ -253,25 +253,80 @@ button {
 .stat {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 5px 12px;
+    gap: 5px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    white-space: nowrap;
+}
+.stat-part,
+.stat-clashes {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
     border-radius: 999px;
     font-size: 13px;
     font-weight: 500;
-    border: 1px solid var(--ok-line);
+    border: 1px solid var(--accent-line);
+    background: var(--accent-wash);
+    color: var(--accent);
+}
+.stat-part {
+    position: relative;
+    cursor: default;
+}
+.stat-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 70;
+    width: max-content;
+    max-width: min(280px, 80vw);
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: var(--shadow);
+    white-space: normal;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: default;
+}
+.stat-part:hover .stat-tooltip,
+.stat-part:focus .stat-tooltip {
+    display: block;
+}
+.stat-tooltip b {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--ink);
+}
+.stat-tooltip ul,
+.stat-tooltip p {
+    margin: 0 0 8px;
+}
+.stat-tooltip ul {
+    padding-left: 18px;
+}
+.stat-tooltip li::marker {
+    color: var(--sc);
+}
+.stat-tooltip li {
+    overflow-wrap: anywhere;
+}
+.stat-part.lab {
+    border-color: var(--ok-line);
     background: var(--ok-wash);
     color: var(--ok);
-    white-space: nowrap;
 }
-.stat.bad {
+.stat-clashes {
     border-color: var(--bad-line);
     background: var(--bad-wash);
     color: var(--bad);
-}
-.stat.idle {
-    border-color: var(--line);
-    background: var(--surface-2);
-    color: var(--ink-2);
 }
 .btn {
     display: inline-flex;
