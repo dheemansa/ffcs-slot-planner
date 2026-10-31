@@ -739,12 +739,6 @@ label.lbl {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.clash {
-    color: var(--bad);
-    display: inline-flex;
-    flex: none;
-    align-self: center;
-}
 .icon-btn.on {
     background: var(--accent-wash);
     color: var(--accent);
@@ -816,6 +810,11 @@ label.lbl {
     background: var(--surface-2);
     border: 1px solid var(--line);
     color: var(--ink);
+}
+.opts .opt.bad .slots .sl {
+    background: var(--bad-wash);
+    border-color: var(--bad-line);
+    color: var(--bad);
 }
 .sl.lab {
     background: var(--accent-wash);

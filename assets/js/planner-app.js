@@ -436,13 +436,6 @@ function optionHtml(s, g, o, items) {
         '<span class="radio"></span><span class="fac">' +
         esc(displayFaculty) +
         '</span>' +
-        (bad
-            ? '<span class="clash" aria-label="Clashes with ' +
-              esc(bad) +
-              '">' +
-              icon('error', 16) +
-              '</span>'
-            : '') +
         '<button class="icon-btn star-btn' +
         (starred ? ' on' : '') +
         '" data-act="star-option" data-id="' +
