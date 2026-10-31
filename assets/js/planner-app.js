@@ -683,6 +683,8 @@ function cellHtml(day, slot, kind, a, b, ctx) {
   );
 }
 function pill(it, slot, kind, bad, ghost) {
+  const slotLabel =
+    slot + (it.opt.venue ? "-(" + it.opt.venue + ")" : "");
   return (
     '<div class="pill' +
     (kind === "lab" ? " lab" : "") +
@@ -696,7 +698,7 @@ function pill(it, slot, kind, bad, ghost) {
         " \u00b7 " +
         it.opt.faculty +
         " \u00b7 " +
-        slot +
+        slotLabel +
         (ghost ? " (preview)" : ""),
     ) +
     '"><b><span class="dot" style="--sc:' +
@@ -704,7 +706,7 @@ function pill(it, slot, kind, bad, ghost) {
     '"></span><span class="t">' +
     esc(label(it.subject)) +
     "</span></b><i>" +
-    slot +
+    esc(slotLabel) +
     "</i><small>" +
     esc(shortName(it.opt.faculty)) +
     "</small></div>"
