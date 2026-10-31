@@ -1,42 +1,42 @@
 {
-  "preset": "BTech CSE Fresher",
-  "term": "Winter Semester 2026-27",
-  "subjects": [
-    {
-      "code": "CSE1022",
-      "name": "Introduction to Programming",
-      "file": "CSE1022.json",
-      "option_count": 220
-    },
-    {
-      "code": "ECE1002",
-      "name": "Fundamentals of Electrical and Electronics Engineering",
-      "file": "ECE1002.json",
-      "option_count": 87
-    },
-    {
-      "code": "ENG2001",
-      "name": "English for Professional Communication",
-      "file": "ENG2001.json",
-      "option_count": 55
-    },
-    {
-      "code": "LIB1023",
-      "name": "Indian Studies",
-      "file": "LIB1023.json",
-      "option_count": 87
-    },
-    {
-      "code": "MAT1002",
-      "name": "Applications of Differential and Difference Equations",
-      "file": "MAT1002.json",
-      "option_count": 67
-    },
-    {
-      "code": "PHY1008",
-      "name": "Modern Physics",
-      "file": "PHY1008.json",
-      "option_count": 86
-    }
-  ]
+    "preset": "BTech CSE Fresher",
+    "term": "Winter Semester 2026-27",
+    "subjects": [
+        {
+            "code": "CSE1022",
+            "name": "Introduction to Programming",
+            "file": "CSE1022.json",
+            "option_count": 220
+        },
+        {
+            "code": "ECE1002",
+            "name": "Fundamentals of Electrical and Electronics Engineering",
+            "file": "ECE1002.json",
+            "option_count": 87
+        },
+        {
+            "code": "ENG2001",
+            "name": "English for Professional Communication",
+            "file": "ENG2001.json",
+            "option_count": 55
+        },
+        {
+            "code": "LIB1023",
+            "name": "Indian Studies",
+            "file": "LIB1023.json",
+            "option_count": 87
+        },
+        {
+            "code": "MAT1002",
+            "name": "Applications of Differential and Difference Equations",
+            "file": "MAT1002.json",
+            "option_count": 67
+        },
+        {
+            "code": "PHY1008",
+            "name": "Modern Physics",
+            "file": "PHY1008.json",
+            "option_count": 86
+        }
+    ]
 }

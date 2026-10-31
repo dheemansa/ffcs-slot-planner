@@ -20,7 +20,7 @@ body {
 img {
     max-width: 100%;
 }
-[hidden]:not([hidden="until-found" i]) {
+[hidden]:not([hidden='until-found' i]) {
     display: none !important;
 }
 
@@ -49,11 +49,11 @@ img {
     --warn-line: #fde293;
     --scrim: rgba(32, 33, 36, 0.45);
     --shadow: 0 8px 28px rgba(60, 64, 67, 0.28);
-    --f-body: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --f-mono: "Roboto Mono", ui-monospace, Menlo, Consolas, monospace;
+    --f-body: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --f-mono: 'Roboto Mono', ui-monospace, Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
+    :root:not([data-theme='light']) {
         --bg: #1b1c1f;
         --surface: #222327;
         --surface-2: #1e1f23;
@@ -80,7 +80,7 @@ img {
         color-scheme: dark;
     }
 }
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
     --bg: #1b1c1f;
     --surface: #222327;
     --surface-2: #1e1f23;
@@ -119,7 +119,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 body::before {
-    content: "";
+    content: '';
     position: fixed;
     inset: 0 0 auto;
     height: env(safe-area-inset-top, 0px);
@@ -140,7 +140,7 @@ button {
     outline-offset: 2px;
 }
 .ms {
-    font-family: "Material Symbols Outlined", sans-serif;
+    font-family: 'Material Symbols Outlined', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
@@ -153,8 +153,8 @@ button {
     letter-spacing: normal;
     text-transform: none;
     direction: ltr;
-    font-feature-settings: "liga";
-    -webkit-font-feature-settings: "liga";
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
     vertical-align: middle;
     flex: none;
 }
@@ -717,7 +717,7 @@ label.lbl {
     background: var(--ok);
 }
 .opt.sel .radio::after {
-    content: "";
+    content: '';
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -785,12 +785,12 @@ label.lbl {
     line-height: 1;
 }
 .star-glyph::before {
-    content: "☆";
+    content: '☆';
 }
 .star-btn:not(.on):hover .star-glyph::before,
 .star-btn:not(.on):focus-visible .star-glyph::before,
 .star-btn.on .star-glyph::before {
-    content: "★";
+    content: '★';
 }
 .star-btn:not(.on):hover,
 .star-btn:not(.on):focus-visible,
@@ -1006,7 +1006,11 @@ textarea.field {
 }
 .lg.l {
     background:
-        repeating-linear-gradient(45deg, color-mix(in srgb, var(--accent) 38%, transparent) 0 1px, transparent 1px 5px),
+        repeating-linear-gradient(
+            45deg,
+            color-mix(in srgb, var(--accent) 38%, transparent) 0 1px,
+            transparent 1px 5px
+        ),
         var(--accent-wash);
     border-color: var(--accent-line);
 }
