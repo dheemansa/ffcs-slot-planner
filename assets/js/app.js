@@ -1,159 +1,28 @@
 import {
     DAYNAME,
-    DAYS,
-    LAB_TIMES,
-    LABS,
     SLOT_INDEX,
-    THEORY,
-    TH_TIMES,
     CODE_RE,
     fmt,
     groupOf,
-    intervals,
     isLabSlot,
     kindOf,
-    mins,
     overlap,
     parseSlotString,
-    slotIds,
-} from './planner-core.js';
+} from './core.js';
+import { createBoardRenderer } from './board.js';
+import {
+    COLORS,
+    STORAGE_KEY,
+    cached,
+    facultySlotKey,
+    loadPreset,
+    optionCacheKey,
+    save,
+    state,
+    subjectCacheKey,
+    uid,
+} from './state.js';
 
-/* ---------- state ---------- */
-const COLORS = [
-    '#1a73e8',
-    '#1e8e3e',
-    '#e37400',
-    '#a142f4',
-    '#0e9aa7',
-    '#d01884',
-    '#7c6f00',
-    '#5f6368',
-];
-const KEY = 'ffcs-slot-planner-v2';
-const LEGACY_KEY = 'ffcs-slot-planner-v1';
-let uidN = 0;
-const uid = () =>
-    'i' + Date.now().toString(36) + (uidN++).toString(36) + Math.random().toString(36).slice(2, 5);
-function subjectCacheKey(subject) {
-    return subject.code || subject.name;
-}
-function optionCacheKey(option) {
-    return [groupOf(option), option.faculty, option.slots.join('+'), option.venue || ''].join('|');
-}
-function facultySlotKey(option) {
-    return [groupOf(option), option.faculty, option.slots.join('+')].join('|');
-}
-function loadCache() {
-    let saved = null,
-        currentRaw = null,
-        legacy = null;
-    try {
-        currentRaw = localStorage.getItem(KEY);
-        saved = currentRaw ? JSON.parse(currentRaw) : null;
-    } catch (error) {
-        console.warn('Could not read saved timetable preferences.', error);
-    }
-    try {
-        const raw = localStorage.getItem(LEGACY_KEY);
-        if (raw && !currentRaw) legacy = JSON.parse(raw);
-    } catch (error) {
-        console.warn('Could not migrate or remove legacy planner data.', error);
-    }
-    const selections =
-        saved?.selections &&
-        typeof saved.selections === 'object' &&
-        !Array.isArray(saved.selections)
-            ? saved.selections
-            : {};
-    if (legacy && Array.isArray(legacy.subjects)) {
-        legacy.subjects.forEach((subject) => {
-            if (!subject || !Array.isArray(subject.options) || !subject.sel) return;
-            const selected = {};
-            ['theory', 'lab'].forEach((group) => {
-                const option = subject.options.find((item) => item.id === subject.sel[group]);
-                if (option) selected[group] = optionCacheKey(option);
-            });
-            if (Object.keys(selected).length) selections[subjectCacheKey(subject)] = selected;
-        });
-    }
-    const starredOptions = Array.isArray(saved?.starredOptions)
-        ? saved.starredOptions.filter((key) => typeof key === 'string')
-        : [];
-    try {
-        if (legacy && !currentRaw)
-            localStorage.setItem(KEY, JSON.stringify({ selections, starredOptions }));
-        localStorage.removeItem(LEGACY_KEY);
-    } catch (error) {
-        console.warn('Could not migrate or remove legacy planner data.', error);
-    }
-    return { selections, starredOptions };
-}
-const cached = loadCache();
-const state = {
-    subjects: [],
-    activeId: null,
-    hideClash: false,
-    starredOptions: cached.starredOptions,
-};
-const PRESET_INDEX_URL = new URL(
-    '../../presets/btech-cse-fresher-2026-27/index.json',
-    import.meta.url
-);
-async function loadPreset() {
-    const indexResponse = await fetch(PRESET_INDEX_URL, { cache: 'no-cache' });
-    if (!indexResponse.ok)
-        throw new Error(`Preset catalog request failed (${indexResponse.status}).`);
-
-    const manifest = await indexResponse.json();
-    if (!Array.isArray(manifest.subjects) || !manifest.subjects.length)
-        throw new Error('Preset catalog does not contain any subjects.');
-
-    const subjects = await Promise.all(
-        manifest.subjects.map(async (entry, index) => {
-            if (typeof entry.file !== 'string' || !/^[\w-]+\.json$/.test(entry.file))
-                throw new Error(`Invalid preset file for ${entry.code || 'subject'}.`);
-
-            const response = await fetch(new URL(entry.file, PRESET_INDEX_URL), {
-                cache: 'no-cache',
-            });
-            if (!response.ok) throw new Error(`Could not load ${entry.code} (${response.status}).`);
-
-            const preset = await response.json();
-            if (
-                preset.code !== entry.code ||
-                !Array.isArray(preset.options) ||
-                preset.options.length !== entry.option_count
-            )
-                throw new Error(`Preset data for ${entry.code} is incomplete.`);
-
-            return {
-                id: uid(),
-                name: preset.name,
-                code: preset.code,
-                color: COLORS[index % COLORS.length],
-                sel: { theory: null, lab: null },
-                options: preset.options.map((option) => {
-                    if (
-                        typeof option.faculty !== 'string' ||
-                        !Array.isArray(option.slots) ||
-                        !option.slots.every((slot) => typeof slot === 'string')
-                    )
-                        throw new Error(`Preset option for ${entry.code} is invalid.`);
-
-                    return {
-                        id: uid(),
-                        faculty: option.faculty,
-                        slots: option.slots,
-                        venue: option.venue || '',
-                        kind: option.kind || kindOf(option.slots),
-                    };
-                }),
-            };
-        })
-    );
-
-    return { subjects, activeId: subjects[0].id, hideClash: false };
-}
 function resetSelections() {
     state.subjects.forEach((subject) => {
         subject.sel = { theory: null, lab: null };
@@ -161,28 +30,6 @@ function resetSelections() {
     ui.preview = null;
     render();
     toast('Timetable selections reset.');
-}
-function save() {
-    try {
-        const selections = {};
-        state.subjects.forEach((subject) => {
-            const selected = {};
-            ['theory', 'lab'].forEach((group) => {
-                const option = subject.options.find((item) => item.id === subject.sel[group]);
-                if (option) selected[group] = optionCacheKey(option);
-            });
-            if (Object.keys(selected).length) selections[subjectCacheKey(subject)] = selected;
-        });
-        localStorage.setItem(
-            KEY,
-            JSON.stringify({
-                selections,
-                starredOptions: state.starredOptions,
-            })
-        );
-    } catch (error) {
-        console.warn('Could not save timetable preferences.', error);
-    }
 }
 const ui = {
     manage: false,
@@ -596,197 +443,16 @@ function renderPanel() {
     el.scrollTop = top;
 }
 
-const segOf = (start) => (start < 820 ? 0 : 1);
-function cellHtml(day, slot, kind, a, b, ctx) {
-    const aliases = slotIds(slot);
-    const occ = ctx.an.items.filter((it) =>
-        aliases.some((alias) => it.opt.slots.indexOf(alias) >= 0)
-    );
-    let h = '';
-    occ.forEach((it) => {
-        const matchedSlot = aliases.find((alias) => it.opt.slots.includes(alias));
-        h += pill(
-            it,
-            matchedSlot,
-            kind,
-            occ.length > 1 ||
-                aliases.some((alias) => ctx.an.keys.has(it.opt.id + '|' + day + '|' + alias)),
-            false
-        );
-    });
-    const pv = ctx.preview;
-    if (pv && aliases.some((alias) => pv.opt.slots.includes(alias))) {
-        const matchedSlot = aliases.find((alias) => pv.opt.slots.includes(alias));
-        const bad = ctx.against.some((r) => r.day === day && r.start < b && a < r.end);
-        h += pill(pv, matchedSlot, kind, bad, true);
-    }
-    return (
-        '<div class="sc">' + (h || '<div class="sid">' + aliases.join('/') + '</div>') + '</div>'
-    );
-}
-function pill(it, slot, kind, bad, ghost) {
-    const slotLabel = slot + (it.opt.venue ? '-(' + it.opt.venue + ')' : '');
-    return (
-        '<div class="pill' +
-        (kind === 'lab' ? ' lab' : '') +
-        (bad ? ' bad' : '') +
-        (ghost ? ' ghost' : '') +
-        '" style="--sc:' +
-        it.subject.color +
-        '" title="' +
-        esc(
-            it.subject.name +
-                ' \u00b7 ' +
-                it.opt.faculty +
-                ' \u00b7 ' +
-                slotLabel +
-                (ghost ? ' (preview)' : '')
-        ) +
-        '"><b><span class="dot" style="--sc:' +
-        it.subject.color +
-        '"></span><span class="t">' +
-        esc(label(it.subject)) +
-        '</span></b><i>' +
-        esc(slotLabel) +
-        '</i><small>' +
-        esc(shortName(it.opt.faculty)) +
-        '</small></div>'
-    );
-}
-function headTrack(kind, seg, row) {
-    const times = kind === 'theory' ? TH_TIMES : LAB_TIMES;
-    let h = '<div class="tr hd" style="grid-column:' + (seg ? 5 : 3) + ';grid-row:' + row + '">',
-        n = 0;
-    times.forEach((t) => {
-        if (segOf(mins(t[0])) !== seg) return;
-        h += '<div class="th">' + t[0] + '-' + t[1] + '</div>';
-        n++;
-    });
-    for (; n < 6; n++) h += '<div class="th">&nbsp;</div>';
-    return h + '</div>';
-}
-function dayTrack(day, kind, seg, row, ctx, last) {
-    const times = kind === 'theory' ? TH_TIMES : LAB_TIMES,
-        grid = kind === 'theory' ? THEORY[day] : LABS[day];
-    let h =
-            '<div class="tr' +
-            (last ? ' dend' : '') +
-            '" style="grid-column:' +
-            (seg ? 5 : 3) +
-            ';grid-row:' +
-            row +
-            '">',
-        n = 0;
-    grid.forEach((slot, i) => {
-        const a = mins(times[i][0]),
-            b = mins(times[i][1]);
-        if (segOf(a) === seg) {
-            h += cellHtml(day, slot, kind, a, b, ctx);
-            n++;
-        }
-    });
-    for (; n < 6; n++) h += '<div class="sc"><div class="sid">-</div></div>';
-    return h + '</div>';
-}
-function matrixHtml(ctx) {
-    let h =
-        '<div class="mx"><div class="dy h" style="grid-column:1;grid-row:1/3">Day</div>' +
-        '<div class="ty" style="grid-column:2;grid-row:1">Theory</div><div class="ty lab" style="grid-column:2;grid-row:2">Lab</div>' +
-        headTrack('theory', 0, 1) +
-        headTrack('theory', 1, 1) +
-        headTrack('lab', 0, 2) +
-        headTrack('lab', 1, 2) +
-        '<div class="lunch">LUNCH</div>';
-    DAYS.forEach((d, i) => {
-        const r = 3 + i * 2;
-        h +=
-            '<div class="dy" style="grid-column:1;grid-row:' +
-            r +
-            '/span 2">' +
-            d +
-            '</div>' +
-            '<div class="ty" style="grid-column:2;grid-row:' +
-            r +
-            '">Theory</div><div class="ty lab" style="grid-column:2;grid-row:' +
-            (r + 1) +
-            ';border-bottom-color:var(--line)">Lab</div>' +
-            dayTrack(d, 'theory', 0, r, ctx, false) +
-            dayTrack(d, 'theory', 1, r, ctx, false) +
-            dayTrack(d, 'lab', 0, r + 1, ctx, true) +
-            dayTrack(d, 'lab', 1, r + 1, ctx, true);
-    });
-    return h + '</div>';
-}
-function renderBoard(an) {
-    an = an || analyse();
-    const s = active();
-    let pv = null,
-        shown = an;
-    if (ui.preview && s) {
-        const o = s.options.find((x) => x.id === ui.preview);
-        if (o && s.sel[groupOf(o)] !== o.id) {
-            pv = { subject: s, group: groupOf(o), opt: o };
-            shown = analyse((it) => it.subject.id === s.id && it.group === pv.group);
-        }
-    }
-    const against = [];
-    if (pv) shown.items.forEach((it) => intervals(it.opt).forEach((r) => against.push(r)));
-    const ctx = { an: shown, preview: pv, against: against };
-    let banners = '';
-    if (an.count) {
-        banners +=
-            '<div class="banner bad">' +
-            icon('error', 20) +
-            '<div><b>' +
-            an.count +
-            (an.count === 1 ? ' clash' : ' clashes') +
-            ' in your picks</b><ul>' +
-            an.msgs
-                .slice(0, 6)
-                .map((m) => '<li>' + esc(m) + '</li>')
-                .join('') +
-            '</ul></div></div>';
-    } else if (an.items.length) {
-        banners +=
-            '<div class="banner ok">' +
-            icon('check_circle', 20) +
-            '<div><b>Conflict-free.</b> ' +
-            an.items.length +
-            (an.items.length === 1 ? ' pick is' : ' picks are') +
-            ' placed with no overlaps.</div></div>';
-    } else {
-        banners +=
-            '<div class="banner">' +
-            icon('info', 20) +
-            '<div>Pick a faculty option for each subject. Hover an option to preview where it lands.</div></div>';
-    }
-    const legend =
-        '<div class="legend"><span><i class="lg s"></i>Theory</span><span><i class="lg l"></i>Lab</span><span><i class="lg p"></i>Preview (replaces your current pick)</span><span><i class="lg c"></i>Clash</span></div>';
-    $('#board').innerHTML =
-        banners +
-        '<div class="tt-card"><div class="tt-head"><h3>Weekly timetable</h3>' +
-        legend +
-        '</div>' +
-        (state.subjects.length
-            ? '<div class="subs">' +
-              state.subjects
-                  .map(
-                      (x) =>
-                          '<span><i class="dot" style="--sc:' +
-                          x.color +
-                          '"></i><b style="font-weight:500">' +
-                          esc(x.name) +
-                          '</b>' +
-                          (x.code ? '<em>' + esc(x.code) + '</em>' : '') +
-                          '</span>'
-                  )
-                  .join('') +
-              '</div>'
-            : '') +
-        '<div class="tt-scroll">' +
-        matrixHtml(ctx) +
-        '</div></div>';
-}
+const renderBoard = createBoardRenderer({
+    state,
+    ui,
+    active,
+    analyse,
+    label,
+    shortName,
+    icon,
+    esc,
+});
 function renderTop(an) {
     const s = active(),
         c = $('#crumb');
@@ -891,7 +557,7 @@ function paintThemeBtn() {
 function applyTheme(t) {
     document.documentElement.setAttribute('data-theme', t);
     try {
-        localStorage.setItem(KEY + '-theme', t);
+        localStorage.setItem(STORAGE_KEY + '-theme', t);
     } catch (e) {
         /* ignore */
     }
@@ -899,7 +565,7 @@ function applyTheme(t) {
 }
 function initTheme() {
     try {
-        const t = localStorage.getItem(KEY + '-theme');
+        const t = localStorage.getItem(STORAGE_KEY + '-theme');
         if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
     } catch (e) {
         /* ignore */

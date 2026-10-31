@@ -1,0 +1,297 @@
+/* board */
+.board {
+    display: grid;
+    gap: 14px;
+    min-width: 0;
+}
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    color: var(--ink-2);
+    font-size: 13px;
+}
+.banner > div {
+    flex: 1;
+    min-width: 0;
+}
+.banner.ok {
+    background: var(--ok-wash);
+    border-color: var(--ok-line);
+    color: var(--ok);
+}
+.banner.bad {
+    background: var(--bad-wash);
+    border-color: var(--bad-line);
+    color: var(--bad);
+    align-items: flex-start;
+}
+.banner.info {
+    background: var(--accent-wash);
+    border-color: var(--accent-line);
+    color: var(--ink);
+}
+.banner ul {
+    margin: 4px 0 0;
+    padding-left: 18px;
+    color: var(--ink);
+}
+.banner b {
+    font-weight: 500;
+}
+.tt-card {
+    border: 1px solid var(--line-soft);
+    border-radius: 12px;
+    background: var(--surface);
+    overflow: hidden;
+}
+.tt-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line-soft);
+    background: var(--surface-2);
+}
+.tt-head h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--ink-2);
+}
+.legend span {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+}
+.lg {
+    width: 14px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid var(--line);
+}
+.lg.s {
+    background: var(--ok-wash);
+    border-color: var(--ok-line);
+}
+.lg.l {
+    background:
+        repeating-linear-gradient(
+            45deg,
+            color-mix(in srgb, var(--accent) 38%, transparent) 0 1px,
+            transparent 1px 5px
+        ),
+        var(--accent-wash);
+    border-color: var(--accent-line);
+}
+.lg.c {
+    background: var(--bad-wash);
+    border-color: var(--bad-line);
+}
+.lg.p {
+    border: 1.5px dashed var(--ok);
+    background: transparent;
+}
+.tt-scroll {
+    overflow-x: auto;
+}
+.mx {
+    display: grid;
+    grid-template-columns: 56px 50px minmax(0, 1fr) 30px minmax(0, 1fr);
+    grid-template-rows: repeat(12, auto);
+    min-width: 1180px;
+    font-size: 12px;
+}
+.mx > * {
+    min-width: 0;
+}
+.mx .dy {
+    display: grid;
+    place-items: center;
+    background: var(--surface-2);
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+.mx .dy.h {
+    color: var(--ink-2);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom-color: var(--line-soft);
+}
+.mx .ty {
+    display: grid;
+    place-items: center;
+    font: 500 10px var(--f-mono);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    background: var(--surface-2);
+    border-right: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+}
+.mx .ty.lab {
+    color: var(--accent);
+}
+.mx .lunch {
+    grid-column: 4;
+    grid-row: 1 / -1;
+    display: grid;
+    place-items: center;
+    background: var(--surface-2);
+    border-left: 1px solid var(--line-soft);
+    border-right: 1px solid var(--line-soft);
+    color: var(--ink-3);
+    font: 500 10px var(--f-body);
+    letter-spacing: 0.3em;
+    writing-mode: vertical-rl;
+}
+.tr {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    border-bottom: 1px solid var(--line-soft);
+    align-items: stretch;
+}
+.tr.hd {
+    background: var(--surface-2);
+}
+.tr.dend {
+    border-bottom-color: var(--line);
+}
+.th {
+    grid-row: 1;
+    padding: 7px 0;
+    text-align: center;
+    font: 400 10px/1.2 var(--f-mono);
+    color: var(--ink-2);
+    border-right: 1px solid var(--line-soft);
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sc {
+    grid-row: 1;
+    padding: 3px;
+    border-right: 1px solid var(--line-soft);
+    display: grid;
+    gap: 3px;
+    align-content: center;
+    min-height: 66px;
+    min-width: 0;
+}
+.sid {
+    font: 400 10px var(--f-mono);
+    color: var(--ink-3);
+    text-align: center;
+}
+.pill {
+    display: grid;
+    justify-items: center;
+    gap: 1px;
+    padding: 4px 2px;
+    border-radius: 8px;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--ok-wash);
+    border: 1px solid var(--ok-line);
+    color: var(--ok);
+}
+.pill.lab {
+    background: var(--accent-wash);
+    border-color: var(--accent-line);
+    color: var(--accent);
+    background-image: repeating-linear-gradient(
+        45deg,
+        color-mix(in srgb, var(--accent) 38%, transparent) 0 1px,
+        transparent 1px 7px
+    );
+}
+.pill b,
+.pill i,
+.pill small {
+    line-height: 1.25;
+}
+.pill b {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    max-width: 100%;
+    min-width: 0;
+}
+.pill b span.t {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pill i {
+    font: 500 10px var(--f-mono);
+    font-style: normal;
+}
+.pill small {
+    font-size: 9px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0.85;
+}
+.pill.bad {
+    background: var(--bad-wash);
+    border-color: var(--bad-line);
+    color: var(--bad);
+    background-image: none;
+}
+.pill.ghost {
+    background: transparent;
+    background-image: none;
+    border: 1.5px dashed var(--ok);
+}
+.pill.ghost.lab {
+    border-color: var(--accent);
+}
+.pill.ghost.bad {
+    background: var(--bad-wash);
+    border-color: var(--bad);
+    color: var(--bad);
+}
+.subs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: 12px;
+    color: var(--ink);
+}
+.subs span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+.subs .dot {
+    width: 10px;
+    height: 10px;
+}
+.subs em {
+    font-style: normal;
+    color: var(--ink-2);
+    font-family: var(--f-mono);
+    font-size: 11px;
+}
