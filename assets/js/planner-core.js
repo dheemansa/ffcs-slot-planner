@@ -1,4 +1,3 @@
-/* ---------- Slot chart (edit here if your campus chart differs) ---------- */
         const DAYS = ["TUE", "WED", "THU", "FRI", "SAT"];
         const DAYNAME = {
           TUE: "Tue",
@@ -34,26 +33,48 @@
           ["18:50", "19:30"],
         ];
         const THEORY = {
-          TUE: ["TFF1", "A1", "B1", "TC1", "D1", "F2", "A2", "B2", "TC2", "TDD2"],
+          TUE: [
+            "TFF1",
+            "A1",
+            "B1",
+            ["TC1", "G1"],
+            "D1",
+            "F2",
+            "A2",
+            "B2",
+            ["TC2", "G2"],
+            "TDD2",
+          ],
           WED: [
             "TGG1",
             "D1",
             "F1",
-            "E1",
+            ["E1", "SC2"],
             "B1",
             "D2",
-            "TF2",
-            "E2",
+            ["TF2", "G2"],
+            ["E2", "SC1"],
             "B2",
             "TCC2",
           ],
-          THU: ["TEE1", "C1", "TD1", "TAA1", "TBB1", "TE2", "C2", "TD2", "A2", "TFF2"],
+          THU: [
+            "TEE1",
+            "C1",
+            ["TD1", "TG1"],
+            ["TAA1", "ECS"],
+            ["TBB1", "CLUB"],
+            ["TE2", "SE1"],
+            "C2",
+            ["TD2", "TG2"],
+            "A2",
+            "TFF2",
+          ],
           FRI: [
             "TCC1",
             "TB1",
             "TA1",
             "F1",
-            "TE1",
+            ["TE1", "SD2"],
             "C2",
             "TB2",
             "TA2",
@@ -62,14 +83,14 @@
           ],
           SAT: [
             "TDD1",
-            "E1",
+            ["E1", "SC2"],
             "C1",
-            "TF1",
+            ["TF1", "G1"],
             "A1",
             "D2",
-            "E2",
-            "TAA2",
-            "TBB2",
+            ["E2", "SD1"],
+            ["TAA2", "ECS"],
+            ["TBB2", "CLUB"],
             "TGG2",
           ],
         };
@@ -102,16 +123,18 @@
         function addSlot(id, c) {
           (SLOT_INDEX[id] = SLOT_INDEX[id] || []).push(c);
         }
+        const slotIds = (slot) => (Array.isArray(slot) ? slot : [slot]);
         DAYS.forEach((d) => {
-          THEORY[d].forEach((id, i) =>
-            addSlot(id, {
+          THEORY[d].forEach((id, i) => {
+            const cell = {
               day: d,
               kind: "theory",
               idx: i,
               start: mins(TH_TIMES[i][0]),
               end: mins(TH_TIMES[i][1]),
-            }),
-          );
+            };
+            slotIds(id).forEach((slot) => addSlot(slot, cell));
+          });
           LABS[d].forEach((id, i) =>
             addSlot(id, {
               day: d,
@@ -124,7 +147,8 @@
         });
 
         /* ---------- Slot strings ---------- */
-        const TOK = "(?:[A-G][12]|T[A-G]{1,2}[12]|V[1-7]|L\\d{1,2})";
+        const TOK =
+          "(?:[A-G][12]|T[A-G]{1,2}[12]|S[A-E][12]|ECS|CLUB|V[1-7]|L\\d{1,2})";
         const TOK_FULL = new RegExp("^" + TOK + "$");
         const GROUP_SRC =
           "(?<![A-Za-z0-9])" + TOK + "(?:\\+" + TOK + ")*(?![A-Za-z0-9])";
@@ -325,4 +349,4 @@
           return { options: out, code: top };
         }
 
-export { DAYS, DAYNAME, TH_TIMES, LAB_TIMES, THEORY, LABS, SLOT_INDEX, mins, fmt, isLabSlot, parseSlotString, kindOf, groupOf, intervals, overlap, groupLines, parseRows, CODE_RE };
+export { DAYS, DAYNAME, TH_TIMES, LAB_TIMES, THEORY, LABS, SLOT_INDEX, mins, fmt, isLabSlot, parseSlotString, slotIds, kindOf, groupOf, intervals, overlap, groupLines, parseRows, CODE_RE };

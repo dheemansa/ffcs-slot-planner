@@ -15,6 +15,7 @@ import {
   mins,
   overlap,
   parseSlotString,
+  slotIds,
 } from "./planner-core.js";
 
 /* ---------- state ---------- */
@@ -578,30 +579,37 @@ function renderPanel() {
 const SEG = [{ base: 480 }, { base: 840 }];
 const segOf = (start) => (start < 820 ? 0 : 1);
 function cellHtml(day, slot, kind, a, b, ctx) {
+  const aliases = slotIds(slot);
   const occ = ctx.an.items.filter(
-    (it) => it.opt.slots.indexOf(slot) >= 0,
+    (it) => aliases.some((alias) => it.opt.slots.indexOf(alias) >= 0),
   );
   let h = "";
   occ.forEach((it) => {
+    const matchedSlot = aliases.find((alias) =>
+      it.opt.slots.includes(alias),
+    );
     h += pill(
       it,
-      slot,
+      matchedSlot,
       kind,
       occ.length > 1 ||
-        ctx.an.keys.has(it.opt.id + "|" + day + "|" + slot),
+        aliases.some((alias) =>
+          ctx.an.keys.has(it.opt.id + "|" + day + "|" + alias),
+        ),
       false,
     );
   });
   const pv = ctx.preview;
-  if (pv && pv.opt.slots.indexOf(slot) >= 0) {
+  if (pv && aliases.some((alias) => pv.opt.slots.includes(alias))) {
+    const matchedSlot = aliases.find((alias) => pv.opt.slots.includes(alias));
     const bad = ctx.against.some(
       (r) => r.day === day && r.start < b && a < r.end,
     );
-    h += pill(pv, slot, kind, bad, true);
+    h += pill(pv, matchedSlot, kind, bad, true);
   }
   return (
     '<div class="sc">' +
-    (h || '<div class="sid">' + slot + "</div>") +
+    (h || '<div class="sid">' + aliases.join("/") + "</div>") +
     "</div>"
   );
 }
