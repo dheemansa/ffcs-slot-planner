@@ -213,7 +213,6 @@ const ui = {
   editing: null,
   renaming: false,
   preview: null,
-  note: "",
   foldManual: false,
   confirmDel: null,
   presetError: "",
@@ -620,7 +619,6 @@ function renderPanel() {
       ? (th ? pick(th, "theory") : "") + (lb ? pick(lb, "lab") : "")
       : '<div class="none">Nothing picked yet. Choose a faculty below.</div>') +
     "</div>" +
-    (ui.note ? '<div class="p-sec"><div class="note">' + esc(ui.note) + "</div></div>" : "") +
     '<div class="p-sec"><div class="tools"><input class="field" id="filter" type="search" placeholder="Search faculty or slot" value="' +
     esc(ui.filter) +
     '" aria-label="Search options">' +
@@ -648,7 +646,6 @@ function renderPanel() {
   el.scrollTop = top;
 }
 
-const SEG = [{ base: 480 }, { base: 840 }];
 const segOf = (start) => (start < 820 ? 0 : 1);
 function cellHtml(day, slot, kind, a, b, ctx) {
   const aliases = slotIds(slot);
@@ -803,11 +800,7 @@ function renderBoard(an) {
       intervals(it.opt).forEach((r) => against.push(r)),
     );
   const ctx = { an: shown, preview: pv, against: against };
-  const hasSample = state.subjects.some((x) => x.example);
   let banners = "";
-  if (hasSample)
-    banners +=
-      '<div class="banner info"><div><b>Sample subjects are showing.</b> Replace them with your own by adding a subject from the menu.</div><button class="btn sm" data-act="clear-samples">Clear samples</button></div>';
   if (an.count) {
     banners +=
       '<div class="banner bad">' +
@@ -1015,30 +1008,10 @@ function addSubject(name) {
   state.activeId = s.id;
   ui.filter = "";
   ui.editing = null;
-  ui.note = "";
   ui.renaming = false;
   closeDrawer();
   render();
   toast("Added " + name + ". Choose a faculty option or add one by hand.");
-}
-function mergeOptions(s, found) {
-  let added = 0;
-  found.forEach((f) => {
-    const key = f.faculty + "|" + f.slots.join("+");
-    if (
-      s.options.some((o) => o.faculty + "|" + o.slots.join("+") === key)
-    )
-      return;
-    s.options.push({
-      id: uid(),
-      faculty: f.faculty,
-      slots: f.slots,
-      venue: f.venue,
-      kind: f.kind,
-    });
-    added++;
-  });
-  return added;
 }
 document.addEventListener("click", (e) => {
   const t = e.target.closest("[data-act]");
@@ -1071,7 +1044,6 @@ document.addEventListener("click", (e) => {
     ui.editing = null;
     ui.renaming = false;
     ui.filter = "";
-    ui.note = "";
     closeDrawer();
     render();
     return;
@@ -1140,15 +1112,6 @@ document.addEventListener("click", (e) => {
   if (act === "rename-cancel") {
     ui.renaming = false;
     renderPanel();
-    return;
-  }
-  if (act === "clear-samples") {
-    state.subjects = state.subjects.filter((x) => !x.example);
-    state.activeId = state.subjects.length
-      ? state.subjects[0].id
-      : null;
-    render();
-    openDrawer();
     return;
   }
   if (act === "open-sheet") {
