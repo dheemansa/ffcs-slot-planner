@@ -29,40 +29,92 @@ const COLORS = [
   "#7c6f00",
   "#5f6368",
 ];
-const KEY = "ffcs-slot-planner-v1";
+const KEY = "ffcs-slot-planner-v2";
+const LEGACY_KEY = "ffcs-slot-planner-v1";
 let uidN = 0;
 const uid = () =>
   "i" +
   Date.now().toString(36) +
   (uidN++).toString(36) +
   Math.random().toString(36).slice(2, 5);
-function load() {
-  try {
-    const r = localStorage.getItem(KEY);
-    if (r) {
-      const s = JSON.parse(r);
-      if (s && Array.isArray(s.subjects)) return s;
-    }
-  } catch (e) {
-    /* storage unavailable */
-  }
-  return null;
+function subjectCacheKey(subject) {
+  return subject.code || subject.name;
 }
-const savedState = load();
-const replaceSampleData =
-  savedState?.subjects.length > 0 &&
-  savedState.subjects.every((subject) => subject.example);
-const needsPreset =
-  !savedState || savedState.subjects.length === 0 || replaceSampleData;
-const state = needsPreset
-  ? { subjects: [], activeId: null, hideClash: false }
-  : savedState;
+function optionCacheKey(option) {
+  return [
+    groupOf(option),
+    option.faculty,
+    option.slots.join("+"),
+    option.venue || "",
+  ].join("|");
+}
+function facultySlotKey(option) {
+  return [groupOf(option), option.faculty, option.slots.join("+")].join("|");
+}
+function loadCache() {
+  let saved = null,
+    currentRaw = null,
+    legacy = null;
+  try {
+    currentRaw = localStorage.getItem(KEY);
+    saved = currentRaw ? JSON.parse(currentRaw) : null;
+  } catch (error) {
+    console.warn("Could not read saved timetable preferences.", error);
+  }
+  try {
+    const raw = localStorage.getItem(LEGACY_KEY);
+    if (raw && !currentRaw) legacy = JSON.parse(raw);
+  } catch (error) {
+    console.warn("Could not migrate or remove legacy planner data.", error);
+  }
+  const selections =
+    saved?.selections &&
+    typeof saved.selections === "object" &&
+    !Array.isArray(saved.selections)
+      ? saved.selections
+      : {};
+  if (legacy && Array.isArray(legacy.subjects)) {
+    legacy.subjects.forEach((subject) => {
+      if (!subject || !Array.isArray(subject.options) || !subject.sel) return;
+      const selected = {};
+      ["theory", "lab"].forEach((group) => {
+        const option = subject.options.find(
+          (item) => item.id === subject.sel[group],
+        );
+        if (option) selected[group] = optionCacheKey(option);
+      });
+      if (Object.keys(selected).length)
+        selections[subjectCacheKey(subject)] = selected;
+    });
+  }
+  const starredOptions = Array.isArray(saved?.starredOptions)
+    ? saved.starredOptions.filter((key) => typeof key === "string")
+    : [];
+  try {
+    if (legacy && !currentRaw)
+      localStorage.setItem(
+        KEY,
+        JSON.stringify({ selections, starredOptions }),
+      );
+    localStorage.removeItem(LEGACY_KEY);
+  } catch (error) {
+    console.warn("Could not migrate or remove legacy planner data.", error);
+  }
+  return { selections, starredOptions };
+}
+const cached = loadCache();
+const state = {
+  subjects: [],
+  activeId: null,
+  hideClash: false,
+  starredOptions: cached.starredOptions,
+};
 const PRESET_INDEX_URL = new URL(
   "../../presets/btech-cse-fresher-2026-27/index.json",
   import.meta.url,
 );
 async function loadPreset() {
-  const indexResponse = await fetch(PRESET_INDEX_URL);
+  const indexResponse = await fetch(PRESET_INDEX_URL, { cache: "no-cache" });
   if (!indexResponse.ok)
     throw new Error(`Preset catalog request failed (${indexResponse.status}).`);
 
@@ -78,7 +130,9 @@ async function loadPreset() {
       )
         throw new Error(`Invalid preset file for ${entry.code || "subject"}.`);
 
-      const response = await fetch(new URL(entry.file, PRESET_INDEX_URL));
+      const response = await fetch(new URL(entry.file, PRESET_INDEX_URL), {
+        cache: "no-cache",
+      });
       if (!response.ok)
         throw new Error(
           `Could not load ${entry.code} (${response.status}).`,
@@ -120,43 +174,37 @@ async function loadPreset() {
 
   return { subjects, activeId: subjects[0].id, hideClash: false };
 }
-async function resetPlanToPreset() {
-  try {
-    const preset = await loadPreset();
-    state.subjects = preset.subjects;
-    state.activeId = preset.activeId;
-    state.hideClash = preset.hideClash;
-    ui.filter = "";
-    ui.editing = null;
-    ui.renaming = false;
-    ui.preview = null;
-    ui.note = "";
-    ui.foldManual = false;
-    ui.confirmDel = null;
-    ui.presetError = "";
-    closeDrawer();
-    render();
-    toast("Plan reset to the bundled preset.");
-  } catch (error) {
-    console.error("Could not reset the plan from the bundled preset.", error);
-    toast(
-      "Could not load preset: " +
-        (error instanceof Error ? error.message : String(error)),
-    );
-  }
+function resetSelections() {
+  state.subjects.forEach((subject) => {
+    subject.sel = { theory: null, lab: null };
+  });
+  ui.preview = null;
+  render();
+  toast("Timetable selections reset.");
 }
 function save() {
   try {
+    const selections = {};
+    state.subjects.forEach((subject) => {
+      const selected = {};
+      ["theory", "lab"].forEach((group) => {
+        const option = subject.options.find(
+          (item) => item.id === subject.sel[group],
+        );
+        if (option) selected[group] = optionCacheKey(option);
+      });
+      if (Object.keys(selected).length)
+        selections[subjectCacheKey(subject)] = selected;
+    });
     localStorage.setItem(
       KEY,
       JSON.stringify({
-        subjects: state.subjects,
-        activeId: state.activeId,
-        hideClash: state.hideClash,
+        selections,
+        starredOptions: state.starredOptions,
       }),
     );
-  } catch (e) {
-    /* ignore */
+  } catch (error) {
+    console.warn("Could not save timetable preferences.", error);
   }
 }
 const ui = {
@@ -395,6 +443,12 @@ function optionHtml(s, g, o, items) {
     );
   }
   const bad = sel ? null : conflictFor(s, g, o, items);
+  const starred = state.starredOptions.includes(facultySlotKey(o));
+  const facultyLabel = Array.from(o.faculty);
+  const displayFaculty =
+    facultyLabel.length > 17
+      ? facultyLabel.slice(0, 17).join("") + "…"
+      : o.faculty;
   const tip =
     o.faculty +
     " \u00b7 " +
@@ -415,7 +469,7 @@ function optionHtml(s, g, o, items) {
     esc(tip) +
     '">' +
     '<span class="radio"></span><span class="fac">' +
-    esc(o.faculty) +
+    esc(displayFaculty) +
     "</span>" +
     (bad
       ? '<span class="clash" aria-label="Clashes with ' +
@@ -424,6 +478,20 @@ function optionHtml(s, g, o, items) {
         icon("error", 16) +
         "</span>"
       : "") +
+    '<button class="icon-btn star-btn' +
+    (starred ? " on" : "") +
+    '" data-act="star-option" data-id="' +
+    o.id +
+    '" aria-label="' +
+    (starred ? "Unstar " : "Star ") +
+    esc(o.faculty + " · " + o.slots.join("+")) +
+    '" aria-pressed="' +
+    starred +
+    '" title="' +
+    (starred ? "Unstar this option" : "Star this option") +
+    '">' +
+    '<span class="star-glyph" aria-hidden="true"></span>' +
+    "</button>" +
     '<span class="slots">' +
     chips(o) +
     "</span>" +
@@ -473,7 +541,11 @@ function renderOptions() {
       )
         return false;
       return true;
-    });
+    }).sort(
+      (a, b) =>
+        Number(state.starredOptions.includes(facultySlotKey(b))) -
+        Number(state.starredOptions.includes(facultySlotKey(a))),
+    );
     html +=
       '<div class="grp-h"><span class="eyebrow">' +
       gr[1] +
@@ -981,7 +1053,17 @@ document.addEventListener("click", (e) => {
   if (act === "open-drawer") return openDrawer();
   if (act === "close-drawer") return closeDrawer();
   if (act === "reset-plan") {
-    resetPlanToPreset();
+    resetSelections();
+    return;
+  }
+  if (act === "star-option" && s) {
+    const option = s.options.find((item) => item.id === id);
+    if (!option) return;
+    const key = facultySlotKey(option);
+    state.starredOptions = state.starredOptions.includes(key)
+      ? state.starredOptions.filter((starred) => starred !== key)
+      : [...state.starredOptions, key];
+    render();
     return;
   }
   if (act === "pick") {
@@ -1230,18 +1312,27 @@ document.addEventListener("keydown", (e) => {
 
 async function initialize() {
   initTheme();
-  if (needsPreset) {
-    try {
-      const preset = await loadPreset();
-      state.subjects = preset.subjects;
-      state.activeId = preset.activeId;
-      state.hideClash = preset.hideClash;
-    } catch (error) {
-      console.error("Could not load the bundled subject preset.", error);
-      ui.presetError =
-        "Could not load the bundled subject preset. Check that the app is served over HTTP, then reload or add a subject manually.";
-      toast("Could not load the bundled subject preset.");
-    }
+  try {
+    const preset = await loadPreset();
+    state.subjects = preset.subjects;
+    state.activeId = preset.activeId;
+    state.subjects.forEach((subject) => {
+      const saved = cached.selections[subjectCacheKey(subject)];
+      if (!saved || typeof saved !== "object") return;
+      ["theory", "lab"].forEach((group) => {
+        const option = subject.options.find(
+          (item) =>
+            groupOf(item) === group &&
+            optionCacheKey(item) === saved[group],
+        );
+        if (option) subject.sel[group] = option.id;
+      });
+    });
+  } catch (error) {
+    console.error("Could not load the bundled subject preset.", error);
+    ui.presetError =
+      "Could not load the bundled subject preset. Check that the app is served over HTTP, then reload or add a subject manually.";
+    toast("Could not load the bundled subject preset.");
   }
   if (!state.subjects.some((s) => s.id === state.activeId))
     state.activeId = state.subjects.length ? state.subjects[0].id : null;
